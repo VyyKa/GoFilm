@@ -220,25 +220,23 @@ GoFilm-main
 
 
 
-## 起源
+## Nguồn gốc
 
-从正式接触编程语言到第一次动手敲代码, , 当时有动手做一些东西的想法,也正是在那时喜欢追番迷二次元, 曾想过做一个自己的动漫站,
+Từ khi chính thức tiếp xúc với ngôn ngữ lập trình cho đến lần đầu tiên viết code, tôi đã có ý tưởng làm một cái gì đó. Cũng vào thời điểm đó, tôi thích theo dõi anime và chiều không gian thứ hai, và tôi đã nghĩ đến việc tạo trang web anime của riêng mình.
 
-但因为知识面匮乏, 总是在进行到某一步时就会遇到一些盲区, 从最开始的静态页面到后面的伪数据, 也实现过一些当时能做到的部分, 
+Nhưng vì thiếu kiến ​​thức, tôi luôn gặp phải một số điểm mù khi đạt đến một bước nhất định. Từ trang tĩnh lúc đầu đến dữ liệu giả sau này, tôi cũng nhận ra một số phần mà mình có thể làm vào thời điểm đó.
 
-后面慢慢学习的过程中也渐渐遗忘了这个想法, 但因为一些偶然的因素, 想要做一个自己的开源项目, 于是就从零开始慢慢实现并完善了这个
+Trong quá trình học chậm rãi sau này, tôi dần quên mất ý tưởng này, nhưng vì một số yếu tố ngẫu nhiên, tôi muốn tạo ra dự án nguồn mở của riêng mình, vì vậy tôi bắt đầu từ đầu và dần nhận ra và cải thiện
 
-影视站的各个部分, 期间也一点点修改颠覆了一些最开始的思路, 但目前主体功能基本完善, 后续也会定期进行一些bug修复和新功能的更新
+Video và trạm video. Trong thời gian này, tôi cũng đã sửa đổi một số ý tưởng ban đầu một chút, nhưng hiện tại các chức năng chính về cơ bản đã hoàn thành và một số bản sửa lỗi và cập nhật chức năng mới sẽ được thực hiện thường xuyên trong tương lai
 
-如有发现Bug, 或者有好的建议, 可以进行反馈, 欢迎各位大佬来指点一二
+Nếu bạn tìm thấy lỗi hoặc có đề xuất hay, bạn có thể phản hồi. Chào mừng bạn đến để cho tôi một số lời khuyên
 
+## Kế hoạch cập nhật và lặp lại
 
+- Hiện tại, một số chức năng của giao diện người dùng cần được phát triển và cải thiện, và mọi người có thể tiếp tục cung cấp một số gợi ý hay
 
-## 更新迭代计划
-
-- 目前用户界面的一些功能有待开发和完善, 大家也可以继续提供一些好的建议
-- 目前pc端的历史记录写了一个简单的测试版, 后面有时间会同步完善pc和wrap端的历史记录和收藏功能
-- 前台功能目前基本满足观看的需求, 后续考虑切入一些登录和账户以及管理后台的功能,慢慢完善这个项目.
-
+- Hiện tại, một phiên bản thử nghiệm đơn giản của bản ghi lịch sử trên PC đã được viết, Sau đó, chúng tôi sẽ cải thiện bản ghi lịch sử và các chức năng thu thập của PC và Wrap cùng một lúc.
+- Chức năng front-end hiện tại về cơ bản đáp ứng được nhu cầu xem. Chúng tôi sẽ xem xét thêm một số chức năng đăng nhập và tài khoản và quản lý back-end trong tương lai để dần cải thiện dự án này.
 
 
