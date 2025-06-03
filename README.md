@@ -1,84 +1,79 @@
 # GoFilm
 
-一个基于 vue 和 gin 实现的在线观影网站
+Một trang web xem phim trực tuyến dựa trên vue và gin
 
-效果展示: <a href="https://m.mubai.link/" target="_blank">点击访问演示站点</a>  
+Hiển thị hiệu ứng: <a href="https://m.mubai.link/" target="_blank">Nhấp để truy cập trang web demo</a>
 
-新版本测试访问站点: [测试内容站点](http://113.44.5.201/index)
+Trang web truy cập thử nghiệm phiên bản mới: [Trang web nội dung thử nghiệm](http://113.44.5.201/index)
 
-## 简介
+## Giới thiệu
 
-**GoFilm** 
+**GoFilm**
 
-项目采用vite + vue作为前端技术栈, 使用 ElementPlus 作为UI 框架进行开发
+Dự án sử dụng vite + vue làm ngăn xếp công nghệ front-end và ElementPlus làm khung UI để phát triển
 
-后端程序使用 Gin + gorm + go-redis 等相关框架提供接口服务, 使用 gocolly 和 robfig/cron 进行公共影视资源采集和定时更新功能
+Chương trình back-end sử dụng Gin + gorm + go-redis và các khung liên quan khác để cung cấp các dịch vụ giao diện và sử dụng gocolly và robfig/cron để thu thập tài nguyên phim và truyền hình công cộng và các chức năng cập nhật theo lịch trình
 
+## Triển khai dự án
 
+**Phương pháp triển khai**
 
-## 项目部署
+- [Triển khai Docker](https://github.com/ProudMuBai/GoFilm/blob/main/film/README.md)
+- [Triển khai 1Panel (bảng điều khiển trực quan hoạt động)](https://blog.mubai.link/2024/04/21/Docs/gofilm/)
 
-**部署方式**
+**Hướng dẫn sử dụng**
 
-- [Docker部署](https://github.com/ProudMuBai/GoFilm/blob/main/film/README.md) 
-- [1Panel部署(可视化面板操作)](https://blog.mubai.link/2024/04/21/Docs/gofilm/)
+- Đường dẫn dự án phụ trợ `GoFilm/server`, bao gồm mô tả cấu trúc dự án, mã nguồn chương trình phụ trợ, mô tả giao diện API, biện pháp phòng ngừa khởi động cục bộ [Xem](https://github.com/ProudMuBai/GoFilm/tree/main/server)
+- Đường dẫn dự án phụ trợ `GoFilm/client`, bao gồm mô tả cấu trúc dự án, mã nguồn dự án phụ trợ, mô tả tệp cấu hình, phương pháp khởi động cục bộ [Xem](https://github.com/ProudMuBai/GoFilm/tree/main/client)
+- Tệp triển khai `GoFilm/film`, bao gồm tất cả các tệp cần thiết để triển khai dự án và các tệp mô tả tương ứng [Xem](https://github.com/ProudMuBai/GoFilm/tree/main/film)
+- Tài liệu hướng dẫn sử dụng chương trình: Cung cấp cài đặt và triển khai dự án cũng như các bước sử dụng khởi tạo tương ứng [Nhấp để go](https://blog.mubai.link/2024/04/21/Docs/gofilm/)
 
-**使用指南**
+## Mô tả phiên bản mới
 
-- 后端项目路径 `GoFilm/server`, 包含 项目结构说明,  后端程序源码, API接口说明, 本地启动注意事项 [查看](https://github.com/ProudMuBai/GoFilm/tree/main/server)
-- 前端项目路径 `GoFilm/client`,  包含 项目结构说明,  前端项目源码,  配置文件说明, 本地启动方式  [查看](https://github.com/ProudMuBai/GoFilm/tree/main/client)
-- 部署文件 `GoFilm/film`, 包含项目部署所需的所有文件以及相应的说明文件  [查看](https://github.com/ProudMuBai/GoFilm/tree/main/film)
-- 程序使用文档:  提供项目安装部署以及相应的初始化使用步骤说明  [点击前往](https://blog.mubai.link/2024/04/21/Docs/gofilm/)
+**Giao diện trang web**
 
+- Nếu bạn cần cải thiện hoặc bổ sung các tính năng mới hoặc hiện có, vui lòng để lại tin nhắn dưới số #71. Chúng tôi sẽ nghỉ vào giữa tháng 1 để có thể tập trung vào việc xử lý
 
+- Phần frontend liên kết một số thông tin như tên trang web và nguồn phát lại với dữ liệu backend, có thể được sửa đổi thông qua backend
+- Cấu trúc dữ liệu của chi tiết video và điều hướng trang chủ đã thay đổi, nhưng kiểu vẫn giữ nguyên
+- Địa chỉ truy cập mặc định: `IP máy chủ: cổng mặc định [http://127.0.0.1/index]`
 
-## 新版本说明
+**Backend quản trị**
 
-**网站前台**
+- Đã thêm nhóm chức năng backend quản trị mới, chủ yếu được sử dụng để quản lý `trang web thu thập`, `cập nhật thường xuyên`, `thông tin trang web cơ bản`, `đồng bộ hóa hình ảnh`, `phân loại video`, `thông tin video`, v.v. (một số chức năng đang được cải thiện và sẽ không ảnh hưởng đến việc sử dụng các chức năng hiện có)
+- Cần phải đăng nhập để truy cập vào backend quản trị, tài khoản/mật khẩu mặc định: `admin admin` (Thay đổi mật khẩu bằng cách kéo xuống cửa sổ bật lên bên phải sau khi đăng nhập thành công)
+- Vui lòng tự xây dựng quyền truy cập cho các tình huống cụ thể
+- Địa chỉ truy cập mặc định: `Máy chủ IP: cổng mặc định/quản lý [http://127.0.0.1:3600/manage]`
 
-- 对新功能和目前功能有需要改善和补充的可以去issue #71下方留言, 一月中旬休假可以集中处理
+**Ghi chú cập nhật**
 
-- 前台部分对网站名称以及播放源等部分信息与后台数据进行关联, 可通过后台进行修改
-- 影片详情部分以及首页导航数据结构发生变化, 样式保持一致
-- 默认访问地址: `服务器IP:默认端口 [http://127.0.0.1/index]`
+- Trang demo sẽ không được cập nhật đồng bộ trong giai đoạn cải thiện chức năng phụ trợ. Bạn cần sử dụng máy chủ để tự xây dựng trải nghiệm
+- Các vấn đề gặp phải trong quá trình sử dụng có thể được mô tả trong mục Sự cố của dự án. Các tính năng mới và gợi ý hay cần bổ sung cũng có thể được cung cấp
+- Đối với phương pháp cài đặt và hướng dẫn sử dụng phiên bản mới, vui lòng tham khảo tệp mô tả trong thư mục phim của dự án này
 
-**管理后台**
-
-- 新增管理后台功能组, 主要用于对 `采集站点`, `定时更新`, `网站基本信息`, `图片同步`, `影片分类`, `影片信息` 等进行管理 (部分功能正在完善中, 不影响已有功能使用)
-- 管理后台访问需进行登录, 默认账号/密码: `admin admin` (登录成功后自行通过右上下拉弹窗进行密码修改)
-- 具体情况请自行搭建访问
-- 默认访问地址: `服务器IP:默认端口/manage [http://127.0.0.1:3600/manage]`
-
-**更新说明**
-
-- 后台功能完善阶段时不会同步更新到演示站点, 需自行使用服务器搭建体验
-- 使用中出现问题可在项目 Issues 中进行描述, 有需要添加的新功能和好的建议也可以提供
-- 新版本安装方法以及使用说明请查看本项目 film 文件夹下的说明文件
-
->新增内容:
+>Nội dung mới:
 >
->- 新增移动端观看历史
->- 新增采集失败记录功能 && 基于失败的采集进行重新采集处理
->- 默认定时任务新增定期处理失败采集功能
->- 修复Banner首页轮播横幅参数修改提交异常问题
->- 修复首页一级分类导航无数据问题
->- 修复首页界面影片信息卡片异常显示问题
->- 优化影片详情以及播放页的组件背景显示问题
+>- Đã thêm lịch sử xem trên thiết bị di động
+>- Đã thêm chức năng ghi lại lỗi thu thập && Thu thập lại dựa trên việc thu thập không thành công
+>- Đã thêm xử lý thường xuyên chức năng thu thập không thành công vào tác vụ theo lịch trình mặc định
+>- Đã khắc phục sự cố gửi bất thường của sửa đổi tham số biểu ngữ băng chuyền trang chủ Banner
+>- Đã khắc phục sự cố không có dữ liệu trong điều hướng phân loại cấp một trên trang chủ
+>- Đã khắc phục sự cố hiển thị bất thường của thẻ thông tin phim trên giao diện trang chủ
+>- Tối ưu hóa sự cố hiển thị nền thành phần của chi tiết phim và trang phát lại
 >
->后续计划:
+>Kế hoạch tiếp theo:
 >
->- 新增功能测试 && buf修复
->- 完善历史观看界面功能 && 优化相应UI组件
->- 针对播放器进行优化 OR 更换播放器组件
->- 采集方式细节化, 实现定向采集以及单一影片的实时手动更新功能
+>- Kiểm tra chức năng mới && sửa chữa buf
+>- Cải thiện chức năng giao diện xem lịch sử && Tối ưu hóa các thành phần UI tương ứng
+>- Tối ưu hóa trình phát hoặc thay thế thành phần trình phát
+>- Chi tiết phương pháp thu thập để đạt được thu thập theo hướng và cập nhật thủ công theo thời gian thực của một bộ phim duy nhất
 
-## 目录结构
+## Cấu trúc thư mục
 
-- client 客户端项目目录 [Client简介](./client/README.md)
-- server 服务端接口项目目录 [Server简介](./client/README.md)
-- film 项目部署相关配置目录 [film 项目安装](./film/README.md)
-- 详细说明请查看具体目录中的README文件
-
+- máy khách máy khách dự án thư mục [Giới thiệu về máy khách](./client/README.md)
+- máy chủ giao diện máy chủ thư mục dự án [Giới thiệu về máy chủ](./client/README.md)
+- triển khai dự án phim liên quan đến cấu hình thư mục [cài đặt dự án phim](./film/README.md)
+- Để biết hướng dẫn chi tiết, vui lòng tham khảo tệp README trong thư mục cụ thể
 ```text
 GoFilm-main                            
 ├─ client                              
